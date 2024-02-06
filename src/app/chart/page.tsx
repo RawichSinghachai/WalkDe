@@ -69,8 +69,8 @@ import HeartRateChart from "@/components/chart/HeartRateChart";
 
 type Props = {};
 
-export const progress_value = (progress: any) => {
-  let value;
+export const progress_value = (progress: number):string => {
+  let value = "";
   if (progress > 0 && progress <= 20) {
     value = "ออกแรงไม่เพียงพอ";
   } else if (progress > 20 && progress <= 40) {
