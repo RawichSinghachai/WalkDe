@@ -35,8 +35,7 @@ const History = (props: Props) => {
     );
     setDisplay(data.data);
   };
-  console.log(display.detail_progress.date);
-  
+
 
   useEffect(() => {
     if (UserStore.id) {

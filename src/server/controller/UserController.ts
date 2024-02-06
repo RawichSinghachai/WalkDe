@@ -76,6 +76,8 @@ export const login = async (usernameOrEmail: string, password: string) => {
       },
       secret
     )
+    console.log('loginok');
+    
     return { status: "login success", token };
   } catch (error) {
     return { status: "login faild" };

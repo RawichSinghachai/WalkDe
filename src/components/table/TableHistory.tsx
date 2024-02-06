@@ -110,7 +110,6 @@ export default function CustomPaginationActionsTable({ value }: any) {
       progress: value.detail_progress.progress[index],
     })
   );
-  console.log("historyList.length",historyList.length);
   
 
   // Avoid a layout jump when reaching the last page with empty rows.
