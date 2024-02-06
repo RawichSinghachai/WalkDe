@@ -296,7 +296,7 @@ const chart = (props: Props) => {
                     textAlign: "center",
                   }}
                 >
-                  {progress_value(
+                  {display.detail_progress.progress && progress_value(
                     display.detail_progress.progress[
                       display.detail_progress.progress.length - 1
                     ]
