@@ -119,7 +119,6 @@ const Login = (props: Props) => {
         }
       })
       .catch(() => {
-        console.log("login fail");
       });
   };
 

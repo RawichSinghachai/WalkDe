@@ -21,6 +21,7 @@ import {
 
 import Checkdata from "@/components/CheckData";
 import HeartRateChart from "@/components/chart/HeartRateChart";
+import { progress_value } from "@/services/ProgressValue";
 
 // const data = [
 //   {
@@ -69,23 +70,7 @@ import HeartRateChart from "@/components/chart/HeartRateChart";
 
 type Props = {};
 
-export const progress_value = (progress: number):string => {
-  let value = "";
-  if (progress > 0 && progress <= 20) {
-    value = "ออกแรงไม่เพียงพอ";
-  } else if (progress > 20 && progress <= 40) {
-    value = "น้อยมาก";
-  } else if (progress > 40 && progress <= 60) {
-    value = "น้อย";
-  } else if (progress > 60 && progress <= 80) {
-    value = "ปานกลาง";
-  } else if (progress > 80 && progress < 100) {
-    value = "มาก";
-  } else if (progress === 100) {
-    value = "ดีเยี่ยม";
-  }
-  return value;
-};
+
 
 const chart = (props: Props) => {
   const [display, setDisplay] = useState({
@@ -93,9 +78,7 @@ const chart = (props: Props) => {
     height: 0,
     heartRate: [{ date: "", rate: 0 }],
     timeDuration: [{ date: "", time: 0 }],
-    progress: [],
-    footStep: [],
-    detail_progress: { date: [], footStep: [], progress: [] },
+    detail_progress: { date: [], footStep: [], progress: [0] },
   });
 
   const UserStore = useSelector((state: RootState) => state.UserStore);

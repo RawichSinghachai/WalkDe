@@ -17,7 +17,7 @@ import LastPageIcon from "@mui/icons-material/LastPage";
 import { useSelector, useDispatch } from "react-redux";
 import type { RootState } from "@/stores/store";
 import axios from "axios";
-import {progress_value} from '@/app/chart/page'
+import {progress_value} from '@/services/ProgressValue'
 
 interface TablePaginationActionsProps {
   count: number;
