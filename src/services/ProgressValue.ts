@@ -1,4 +1,4 @@
-export const progress_value = (progress:number):string => {
+export const progress_value = (progress:any):string => {
     let value = "";
     if (progress > 0 && progress <= 20) {
       value = "ออกแรงไม่เพียงพอ";
